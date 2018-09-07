@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登陆</title>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/loading.js"></script>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>   
+    <h3>ProsperLee</h3>
+    <p class="text">请输入用户名和密码</p>
+    <form action="script/manage/config.php" id="signinForm">
+        <p>
+            <input type="text" name="username" id="username" placeholder="用户名">
+        </p>
+        <p>
+            <input type="password" name="userpwd" id="userpwd" placeholder="密码">
+        </p>
+        <p>
+            <input type="submit" value="登陆">
+            <input type="button" value="还没有注册账号?" onclick="window.location.href='register.html'">
+        </p>
+    </form>
+    <!--<ul class="bgi">-->
+        <!--<li><img src="images/bg1.png" alt=""></li>-->
+        <!--<li><img src="images/bg2.jpg" alt=""></li>-->
+        <!--<li><img src="images/bg3.png" alt=""></li>-->
+        <!--<li><img src="images/bg4.jpg" alt=""></li>-->
+    <!--</ul>-->
+
+
+
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
