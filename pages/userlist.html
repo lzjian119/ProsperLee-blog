@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户表</title>
+    <script src="../public/js/jquery-1.11.3.min.js"></script>
+</head>
+<style>
+    table{
+	    border-collapse:collapse;
+    }
+    tbody *{
+        border: 1px solid #989898;
+        padding: 6px 18px;
+    }
+    tbody tr th{
+        background-color: #d6d6d6;
+    }
+    tbody tr:nth-child(2n+1){
+        background-color: #eeeeee;
+    }
+
+</style>
+<body>
+    <h3>用户信息表</h3>
+    <table id="table">
+        <tbody>
+            <tr>
+                <th></th>
+                <th>用户编号</th>
+                <th>用户昵称</th>
+                <th>用户密码</th>
+                <th>用户手机</th>
+                <th>用户邮箱</th>
+                <th>创建时间</th>
+            </tr>
+            <tr v-for="(v,i) in data.data">
+                <td>{{i+1}}</td>
+                <td>{{v.iProsperId}}</td>
+                <td>{{v.nickname}}</td>
+                <td>{{v.password}}</td>
+                <td>{{v.phone}}</td>
+                <td>{{v.email}}</td>
+                <td>{{v.createtime}}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        let vmUsers = new Vue({
+            el:"#table",
+            data:{
+                data:{}
+            }
+        })
+        $.ajax({
+            url: "../application/config/login.php",
+            type: "POST",
+            dataType: "json",
+            data: {
+                action: "3"
+            },
+            success: function (data) {
+                vmUsers.data = data;
+            }
+        })
+    </script>
+</body>
+</html>
