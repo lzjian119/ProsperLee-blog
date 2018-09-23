@@ -67,7 +67,7 @@ function register()
         echo json($code, $message, $data);
     } else {
         // 创建用户Id
-        $iProsperId = substr(str_shuffle("1234567890"),0,8);
+        $iProsperId = substr(str_shuffle("1234567890"),1,8); // 从1开始截取8位
         // 创建时间
         $createtime = date('Y-m-d h:i:s',time());
         // 插入语句
