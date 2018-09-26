@@ -1,0 +1,11 @@
+CREATE TABLE `users`.`pl_article`  (
+  `title` varchar(200) NOT NULL COMMENT '文章标题',
+  `content` longtext NOT NULL COMMENT '文章内容',
+  `publishDate` datetime(0) NOT NULL COMMENT '发布日期',
+  `pageView` varchar(255) NOT NULL COMMENT '浏览量',
+  `term` varchar(255) NULL COMMENT '标签/类目',
+  `imgUrl` varchar(255) NULL COMMENT '缩略图',
+  `articleCount` varchar(4) NOT NULL COMMENT '文章总数',
+  `pageId` int(0) NOT NULL COMMENT '文章Id',
+  `abstract` varchar(255) NULL COMMENT '摘要'
+);

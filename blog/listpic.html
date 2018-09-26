@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ProsperLee-BLOG</title>
+    <meta name="keywords" content="HTML,CSS,PHP,JS,javascript,MySQL,博客,技术,交流,编程,代码,框架,PPROSPER" />
+	<meta name="description" content="一个技术交流分享的个人博客---ProsperLee" />
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/m.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script>
+        window.onload = function ()
+{
+	var oH2 = document.getElementsByTagName("h2")[0];
+	var oUl = document.getElementsByTagName("ul")[0];
+	oH2.onclick = function ()
+	{
+		var style = oUl.style;
+		style.display = style.display == "block" ? "none" : "block";
+		oH2.className = style.display == "block" ? "open" : ""
+	}
+}
+</script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="headtop"></div>
+            <div class="contenttop">
+                <div class="logo f_l">江南墨卷</div>
+                <div class="search f_r">
+                    <form action="/e/search/index.php" method="post" name="searchform" id="searchform">
+                        <input name="keyboard" id="keyboard" class="input_text" value="请输入关键字" style="color: rgb(153, 153, 153);"
+                            onfocus="if(value=='请输入关键字'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='请输入关键字'}"
+                            type="text">
+                        <input name="Submit" class="input_submit" value="搜索" type="submit">
+                    </form>
+                </div>
+                <div class="blank"></div>
+                <div id="mnav">
+                    <h2><span class="navicon"></span></h2>
+                    <ul>
+                        <li><a href="/">网站首页</a></li>
+                        <li><a href="/about.html">关于我</a></li>
+                        <li><a href="/download/">模板分享</a>
+                            <ul>
+                                <li><a href="#.html">关于我</a></li>
+                                <li><a href="#.html">关于我</a></li>
+                                <li><a href="#.html">关于我</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/jstt/">学无止境</a>
+                            <ul>
+                                <li><a href="#.html">关于我</a></li>
+                                <li><a href="#.html">关于我</a></li>
+                                <li><a href="#.html">关于我</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/news/">慢生活</a>
+                            <ul>
+                                <li><a href="#.html">关于我</a></li>
+                                <li><a href="#.html">关于我</a></li>
+                                <li><a href="#.html">关于我</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/e/tool/gbook/?bid=3">留言</a></li>
+                    </ul>
+                </div>
+                <nav>
+                    <div class="navigation">
+                        <ul class="menu">
+                            <li><a href="index.html">网站首页</a></li>
+                            <li><a href="#">关于我</a>
+                                <ul>
+                                    <li><a href="about.html">个人简介</a></li>
+                                    <li><a href="listpic.html">个人相册</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">我的日记</a>
+                                <ul>
+                                    <li><a href="newslistpic.html">个人日记</a></li>
+                                    <li><a href="newslistpic.html">学习笔记</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="newslistpic.html">技术文章</a> </li>
+                            <li><a href="#">给我留言</a> </li>
+                        </ul>
+                    </div>
+                </nav>
+                <SCRIPT type=text/javascript>
+                    $(".menu li").hover(function(){ $(this).find('ul:first').css({visibility: "visible"
+                    ,display: "none" }).slideDown("normal"); },function(){ $(this).find('ul:first').css({visibility:
+                    "hidden" }); });</SCRIPT> </div> </header> <div class="container">
+                    <div class="con_content">
+    <div class="about_box">
+      <h2 class="nh1"><span>您现在的位置是：<a href="/" target="_blank">网站首页</a>>><a href="#" target="_blank">个人相册</a></span><b>个人相册</b></h2>
+      <div class="lispic">
+        <ul>
+          <li><a href="/"><i><img src="images/01.jpg"></i><span>图片展示</span></a></li>
+          <li><a href="/"><i><img src="images/02.jpg"></i><span>图片展示</span></a></li>
+          <li><a href="/"><i><img src="images/03.jpg"></i><span>图片展示</span></a></li>
+          <li><a href="/"><i><img src="images/04.jpg"></i><span>图片展示</span></a></li>
+          <li><a href="/"><i><img src="images/03.jpg"></i><span>图片展示</span></a></li>
+          <li><a href="/"><i><img src="images/06.jpg"></i><span>图片展示</span></a></li>
+          <li><a href="/"><i><img src="images/01.jpg"></i><span>图片展示</span></a></li>
+          <li><a href="/"><i><img src="images/02.jpg"></i><span>图片展示</span></a></li>
+        </ul>
+      </div>
+      <div class="pagelist"><a href="/">首页</a><a href="/">上一页</a><a href="/">下一页</a><a href="/">尾页</a></div>
+    </div>
+  </div>
+  <div class="blank"></div>
+  <!-- container代码 结束 -->
+  
+
+</div>
+  <footer>
+    <div class="footer">
+        <div class="f_l">
+            <p>Copyright © 2018 - 2018 ProseprLee, All Rights Reserved</p>
+        </div>
+        <div class="f_r textr">
+            <p>Powered by: Internet</p>
+        </div>
+    </div>
+  </footer>
+</body>
+</html>
