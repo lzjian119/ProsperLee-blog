@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文章列表</title>
+    <script src="../public/js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+    <ul id="article-list">
+        <li v-for="(v,i) in data.data" style="border:1px solid mediumspringgreen;margin: 10px;">
+            <h3 style="color: orangered;"><span style="font-weight:400;color:#fff;background:#000;padding: 2px 10px;font-size: 12px;">{{v.tag}}</span> {{v.title}}</h3>
+            <p>{{v.abstract}}</p>
+            <div style="border-bottom:2px solid #00ff00;">作者:<span style="color:mediumvioletred;">{{v.nickname}}</span> 发布时间:<span style="color:mediumvioletred;">{{v.publishtime}}</span> 浏览量({{v.readcount}})</div>
+            <p v-html="v.content" style="padding:20px;background:#ccc;"></p>
+        </li>
+    </ul>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        let vmArticleList = new Vue({
+            el:"#article-list",
+            data:{
+                data:{}
+            }
+        })
+        $.ajax({
+            url: "../application/config/login.php",
+            type: "POST",
+            dataType: "json",
+            data: {
+                action: "4"
+            },
+            success: function (data) {
+                vmArticleList.data = data;
+            }
+        })
+    </script>
+</body>
+</html>

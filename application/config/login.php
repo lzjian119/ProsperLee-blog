@@ -2,7 +2,7 @@
 
 require "mysqllink.php";
 
-// 1登陆 2注册 3查询用户
+// 1登陆 2注册 3查询用户 4查询文章
 
 //做个路由 action为url中的参数
 @$action = $_POST['action'];
@@ -16,6 +16,9 @@ switch ($action) {
         break;
     case '3':
         selectusers();
+        break;
+    case '4':
+        articlelist();
         break;
 }
 
@@ -104,5 +107,22 @@ function selectusers()
     $code = "000200";
     $message = "查询用户成功";
     $data = $userslist;
+    echo json($code, $message, $data);
+}
+
+// 查询文章
+function articlelist()
+{
+    $link = new mysqli(SERVERNAME, USERNAME, PASSWORD, "users");
+    mysqli_query($link, "SET NAMES utf8");
+    $sql = "SELECT * FROM pl_article LIMIT 0,3";  // 3条数据  从1开始
+    $result = $link->query($sql);
+    $articlelist = [];
+    foreach ($result as $value){
+        array_push($articlelist,$value);   
+    }
+    $code = "000200";
+    $message = "查询文章成功";
+    $data = $articlelist;
     echo json($code, $message, $data);
 }

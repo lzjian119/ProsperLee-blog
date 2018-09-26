@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>富文本</title>
+</head>
+<style type="text/css">
+    .toolbar {
+        border: 1px solid #ccc;
+        width: 824px;
+    }
+    .text {
+        border: 1px solid #ccc;
+        width: 824px;
+        height: 400px;
+    }
+    .title{
+        padding: 6px 10px;
+        width: 800px;
+    }
+    .abstract{
+        width: 818px;
+        height: 120px;
+        resize: none;
+    }
+    label{
+        display: block;
+        font-weight: bold;
+    }
+    #upImg{
+        position: relative;
+        width: 200px;
+        height: 100px;
+        background-color: #ccc;
+        overflow: hidden;
+    }
+    #upImg::after{
+        content: "";
+        background: url('../public/images/upimg.png') no-repeat center center;
+        background-size: cover;
+        width: 32px;
+        height: 32px;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 3em;
+    }
+    .imgFile{
+        opacity: 0;
+    }
+    .tag{
+        margin: 0;
+    }
+    .tag label{
+        display: inline;
+        font-weight: normal;
+        font-size: 12px;
+    }
+</style>
+<body>
+    <form action="">
+        <div>
+            <label for="title">添加标题</label>
+            <input name="title" class="title" id="title" type="text" placeholder="请输入标题">
+        </div>
+        <div>
+            <label for="tag">添加标签</label>
+            <p class="tag">
+                <label><input type="radio" name="tag" value="">HTML</label>
+                <label><input type="radio" name="tag" value="">CSS</label>
+                <label><input type="radio" name="tag" value="">JavaScript</label>
+                <label><input type="radio" name="tag" value="">PHP</label>
+                <label><input type="radio" name="tag" value="">MySQL</label>
+                <label><input type="radio" name="tag" value="">Vue</label>
+                <label><input type="radio" name="tag" value="">取消选择</label>
+            </p>
+        </div>
+        <div>
+            <label for="abstract">添加摘要</label>
+            <textarea name="abstract" class="abstract" id="abstract" placeholder="请输入摘要，否则将取正文的前120个字作为摘要！！！"></textarea>
+        </div>
+        <div>
+            <label for="text">添加正文</label>
+            <div id="toolbar" class="toolbar"></div>
+            <div id="text" class="text"></div>
+        </div>
+        <div>
+            <label>添加封面</label>
+            <label id="upImg" for="imgFile">
+                <input name="imgFile" class="imgFile" id="imgFile" type="file">
+            </label>
+        </div>
+        <div>
+            <input type="submit" value="发布">
+            <input type="button" value="取消">
+        </div>
+    </form>
+    <script src="../public/js/jquery-1.11.3.min.js"></script>
+    <script src="../public/js/wangEditor.min.js"></script>
+    <script>
+        var E = window.wangEditor
+        var editor = new E('#toolbar','#text')
+        editor.create()
+    </script>
+</body>
+</html>
