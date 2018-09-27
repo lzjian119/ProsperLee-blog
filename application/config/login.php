@@ -104,7 +104,7 @@ function selectusers()
 {
     $link = new mysqli(SERVERNAME, USERNAME, PASSWORD, "users");
     mysqli_query($link, "SET NAMES utf8");
-    $sql = "SELECT * FROM pl_userslist";
+    $sql = "SELECT * FROM pl_userslist order by id desc";
     $result = $link->query($sql);
     $userslist = [];
     foreach ($result as $value){
@@ -121,7 +121,7 @@ function articlelist()
 {
     $link = new mysqli(SERVERNAME, USERNAME, PASSWORD, "users");
     mysqli_query($link, "SET NAMES utf8");
-    $sql = "SELECT * FROM pl_article LIMIT 0,3";  // 3条数据  从1开始
+    $sql = "SELECT * FROM pl_article order by id desc LIMIT 0,3";  // 3条数据  从1开始
     $result = $link->query($sql);
     $articlelist = [];
     foreach ($result as $value){
@@ -133,7 +133,7 @@ function articlelist()
     echo json($code, $message, $data);
 }
 
-
+// 添加文章
 function addArticle()
 {
     $link = new mysqli(SERVERNAME, USERNAME, PASSWORD, "users");
@@ -169,6 +169,7 @@ function addArticle()
     $link->close();
 }
 
+// 文章内容
 function articleInfo()
 {
     @$articleid = $_POST['articleid'];
