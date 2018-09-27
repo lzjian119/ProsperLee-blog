@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文章展示</title>
+</head>
+<body>
+    <script src="../public/js/jquery-1.11.3.min.js"></script>
+    <script>
+        /**
+         * [getUrlParam 获取地址栏传参]
+         * @param  {[String]} paramname [参数名]
+         * @return {[String]}           [参数值]
+         */
+         function getUrlParam(paramname) {
+                    
+            var reg = new RegExp("(^|&)" + paramname + "=([^&]*)(&|$)");
+
+            // 查询匹配 substr(1)删除? match()匹配
+            var s = window.location.search.substr(1).match(reg);
+
+            if (s != null) {
+
+                return unescape(s[2]); // unescape() 函数可对通过 escape() 编码的字符串进行解码。
+
+            }
+
+            return null;
+
+        }
+        
+
+        $.ajax({
+            url: "../application/config/login.php",
+            type: "POST",
+            dataType: "json",
+            data: {
+                action: "6",
+                articleid: getUrlParam("articleid")
+            },
+            success: function (data) {
+                console.log(data);
+            }
+        })
+    </script>
+</body>
+</html>

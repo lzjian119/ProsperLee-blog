@@ -62,7 +62,7 @@
     }
 </style>
 <body>
-    <form action="">
+    <form action="" onsubmit="return false;">
         <div>
             <label for="title">添加标题</label>
             <input name="title" class="title" id="title" type="text" placeholder="请输入标题">
@@ -70,12 +70,12 @@
         <div>
             <label for="tag">添加标签</label>
             <p class="tag">
-                <label><input type="radio" name="tag" value="">HTML</label>
-                <label><input type="radio" name="tag" value="">CSS</label>
-                <label><input type="radio" name="tag" value="">JavaScript</label>
-                <label><input type="radio" name="tag" value="">PHP</label>
-                <label><input type="radio" name="tag" value="">MySQL</label>
-                <label><input type="radio" name="tag" value="">Vue</label>
+                <label><input type="radio" name="tag" value="HTML">HTML</label>
+                <label><input type="radio" name="tag" value="CSS">CSS</label>
+                <label><input type="radio" name="tag" value="JavaScript">JavaScript</label>
+                <label><input type="radio" name="tag" value="PHP">PHP</label>
+                <label><input type="radio" name="tag" value="MySQL">MySQL</label>
+                <label><input type="radio" name="tag" value="Vue">Vue</label>
                 <label><input type="radio" name="tag" value="">取消选择</label>
             </p>
         </div>
@@ -101,10 +101,6 @@
     </form>
     <script src="../public/js/jquery-1.11.3.min.js"></script>
     <script src="../public/js/wangEditor.min.js"></script>
-    <script>
-        var E = window.wangEditor
-        var editor = new E('#toolbar','#text')
-        editor.create()
-    </script>
+    <script src="editor.js"></script>
 </body>
 </html>

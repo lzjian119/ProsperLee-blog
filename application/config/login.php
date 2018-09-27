@@ -2,7 +2,7 @@
 
 require "mysqllink.php";
 
-// 1登陆 2注册 3查询用户 4查询文章
+// 1登陆 2注册 3查询用户 4查询文章 5创建文章 6查询文章
 
 //做个路由 action为url中的参数
 @$action = $_POST['action'];
@@ -19,6 +19,12 @@ switch ($action) {
         break;
     case '4':
         articlelist();
+        break;
+    case '5':
+        addArticle();
+        break;
+    case '6':
+        articleInfo();
         break;
 }
 
@@ -124,5 +130,56 @@ function articlelist()
     $code = "000200";
     $message = "查询文章成功";
     $data = $articlelist;
+    echo json($code, $message, $data);
+}
+
+
+function addArticle()
+{
+    $link = new mysqli(SERVERNAME, USERNAME, PASSWORD, "users");
+
+    mysqli_query($link, "SET NAMES utf8");
+
+    @$title = $_POST['title'];
+    @$tag = $_POST['tag'];
+    @$abstract = $_POST['abstract'];
+    @$content = $_POST['content'];
+
+    
+    // 创建文章Id
+    $articleid = substr(str_shuffle("1234567890"),1,8); // 从1开始截取8位
+    // 创建时间
+    $publishtime = date('Y-m-d h:i:s',time());
+    // 插入语句
+    $sql = "INSERT INTO pl_article (articleid, tag, abstract, content, title, publishtime) VALUES ('" . $articleid . "','" . $tag . "', '" . $abstract . "', '" . $content . "','" . $title . "','" . $publishtime . "')";
+    // var_dump($link->query($sql));
+    if ($link->query($sql) === true) {
+        $code = "000200";
+        $message = "发布文章成功";
+        $data = "";
+        echo json($code, $message, $data);
+    } else {
+        $code = "000500";
+        $message = "发布文章失败";
+        $data = "";
+        echo json($code, $message, $data);
+    }
+
+    // 关闭连接
+    $link->close();
+}
+
+function articleInfo()
+{
+    @$articleid = $_POST['articleid'];
+
+    $link = new mysqli(SERVERNAME, USERNAME, PASSWORD, "users");
+    mysqli_query($link, "SET NAMES utf8");
+    
+    $sql = "SELECT * FROM pl_article WHERE articleid = '" . $articleid . "'";
+    $result = $link->query($sql);
+    $code = "000200";
+    $message = "查询文章成功";
+    $data = mysqli_fetch_object($result);
     echo json($code, $message, $data);
 }
