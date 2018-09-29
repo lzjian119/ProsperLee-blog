@@ -205,22 +205,24 @@ nav {
     font-size: 18px;
     height: 52px;
     line-height: 52px;
-    padding-left: 10px;
 }
 
 #mnav h2.open {
+    position: fixed;
     text-align: right;
-    background: rgba(1, 1, 1, 0.8);
     width: 100%;
+    z-index: 1;
 }
 
 #mnav ul {
+    position: fixed;
     display: none;
     background: rgba(1, 1, 1, 0.8);
     width: 100%;
-    padding-bottom: 40px
+    padding: 86px 0px 40px 0;
+    bottom: 0;
+    top: 0;
 }
-
 #mnav li {
     line-height: 40px;
     font-size: 16px;
@@ -374,3 +376,28 @@ footer {
     text-align: right
 }
 
+.pagelist {
+    text-align: center;
+    color: #666;
+    width: 100%;
+    clear: both;
+    margin: 20px 0;
+    padding-top: 20px
+}
+
+.pagelist a {
+    color: #666;
+    margin: 0 2px;
+    border: 1px solid #000;
+    padding: 5px 10px;
+}
+
+.pagelist a:hover {
+    color: #f00;
+    text-decoration: underline
+}
+
+.pagelist>b {
+    border: 1px solid #000;
+    padding: 5px 10px;
+}
