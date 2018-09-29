@@ -34,13 +34,19 @@ $(function () {
         return false
     }
     // 切换背景图
-    var count = 0;
-    setInterval(function () {
-        count = count >= $('.bgi li').length ? 0 : count;
-        $('.bgi li').eq(count).fadeIn(3000);
-        $('.bgi li').eq(count).siblings().fadeOut(3000);
-        count++;
-    }, 6000);
+    // <ul class="bgi">
+    //     <li><img src="images/bg1.png" alt=""></li>
+    //     <li><img src="images/bg2.jpg" alt=""></li>
+    //     <li><img src="images/bg3.png" alt=""></li>
+    //     <li><img src="images/bg4.jpg" alt=""></li>
+    // </ul>
+    // var count = 0;
+    // setInterval(function () {
+    //     count = count >= $('.bgi li').length ? 0 : count;
+    //     $('.bgi li').eq(count).fadeIn(3000);
+    //     $('.bgi li').eq(count).siblings().fadeOut(3000);
+    //     count++;
+    // }, 6000);
     // 鼠标点击特效
     (function () {
         window.onclick = function (event) {

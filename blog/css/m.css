@@ -240,6 +240,9 @@
         padding: 0 0 0 80px;
         text-align: left;
     }
+    .nextinfos p{
+        display: block;
+    }
 }
 
 /* 小于479px */
@@ -360,5 +363,8 @@
     .aboutme ul li:first-child{
         padding: 0 0 0 80px;
         text-align: left;
+    }
+    .nextinfos p{
+        display: block;
     }
 }

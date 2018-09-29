@@ -286,6 +286,7 @@ h3.blogtitle {
 /* ProsperLee 样式*/
 /*时间*/
 .time .time-date{
+    color: #000;
     display: inline-block;
     position: relative;
     padding-left:90px;

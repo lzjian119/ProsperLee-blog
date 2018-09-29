@@ -6,9 +6,17 @@
 html {
     height: 100%;
 }
-
+html, 
+body,
+button,
+a,
+input[type='button'],
+input[type='submit']{
+    cursor: url(https://files.cnblogs.com/files/lprosper/mouse.ico),auto;
+}
 body {
-    background-color: #333;
+    background: rgba(0, 0, 0, 0.8) url('../images/bg.png') no-repeat center center;
+    background-size: cover;
     text-align: center;
     color: #fff;
 }
