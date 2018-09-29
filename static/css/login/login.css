@@ -15,7 +15,7 @@ input[type='submit']{
     cursor: url(https://files.cnblogs.com/files/lprosper/mouse.ico),auto;
 }
 body {
-    background: rgba(0, 0, 0, 0.8) url('../images/bg.png') no-repeat center center;
+    background: rgba(0, 0, 0, 0.8) url('/static/images/login/bg.png') no-repeat center center;
     background-size: cover;
     text-align: center;
     color: #fff;

@@ -17,14 +17,14 @@
 
 /*卷轴*/
 .jztop {
-    background: url(../images/maintopbg.jpg) no-repeat;
+    background: url(/static/images/blog/maintopbg.jpg) no-repeat;
     width: 1034px;
     margin: auto;
     height: 14px;
 }
 
 .jzend {
-    background: url(../images/mainendbg.jpg) no-repeat;
+    background: url(/static/images/blog/mainendbg.jpg) no-repeat;
     width: 1034px;
     margin: auto;
     height: 14px;
@@ -136,11 +136,11 @@ h3.blogtitle {
 }
 
 .dtime {
-    background: url(../images/posttime.gif) no-repeat left center
+    background: url(/static/images/blog/posttime.gif) no-repeat left center
 }
 
 .viewnum {
-    background: url(../images/newsbg04.png) no-repeat left center
+    background: url(/static/images/blog/newsbg04.png) no-repeat left center
 }
 
 .blogpic img {
@@ -169,7 +169,7 @@ h3.blogtitle {
     color: #fff;
     font-size: 18px;
     height: 44px;
-    background: url(../images/rtitbg.png) no-repeat;
+    background: url(/static/images/blog/rtitbg.png) no-repeat;
     padding-left: 40px;
     margin: 0 0 10px 0
 }
@@ -225,7 +225,7 @@ h3.blogtitle {
 }
 
 .tulanmu {
-    background: url(../images/lanmbq.png) no-repeat center left;
+    background: url(/static/images/blog/lanmbq.png) no-repeat center left;
     padding-left: 17px
 }
 
@@ -238,7 +238,7 @@ h3.blogtitle {
 }
 
 .tutime {
-    background: url(../images/datepng.png) no-repeat left center;
+    background: url(/static/images/blog/datepng.png) no-repeat left center;
     padding-left: 15px
 }
 
@@ -260,7 +260,7 @@ h3.blogtitle {
     clear: both;
     overflow: hidden;
     padding-left: 15px;
-    background: url(../images/libg.jpg) no-repeat left center;
+    background: url(/static/images/blog/libg.jpg) no-repeat left center;
     max-width: 300px;
     text-overflow: ellipsis;
     white-space: nowrap;

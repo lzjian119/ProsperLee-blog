@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: "huakangwawa";
-    src: url("../fonts/huakangwawa.ttf");
+    src: url("/static/fonts/huakangwawa.ttf");
 }
 
 /* 共用css */
@@ -13,7 +13,7 @@
 
 body {
     font: 14px "微软雅黑", Arial, Helvetica, sans-serif;
-    background: url(../images/bg.jpg) repeat;
+    background: url('/static/images/blog/bg.jpg') repeat;
     color: #555
 }
 
@@ -74,17 +74,17 @@ a {
 }
 
 #wrapper {
-    background: url(../images/footside.jpg) bottom center no-repeat;
+    background: url(/static/images/blog/footside.jpg) bottom center no-repeat;
     overflow: hidden;
 }
 
 header {
     width: 100%;
-    background: url(../images/yuanshan.jpg) right bottom no-repeat
+    background: url(/static/images/blog/yuanshan.jpg) right bottom no-repeat
 }
 
 .headtop {
-    background: url(../images/topbg.jpg) repeat-x;
+    background: url(/static/images/blog/topbg.jpg) repeat-x;
     height: 28px;
 }
 
@@ -136,7 +136,7 @@ nav {
 
 .navigation {
     height: 64px;
-    background: url(../images/navbg.png) no-repeat;
+    background: url(/static/images/blog/navbg.png) no-repeat;
     font-family: "微软雅黑";
 }
 
@@ -164,7 +164,7 @@ nav {
 
 .menu ul {
     position: relative;
-    background: url(../images/footerbg.png);
+    background: url(/static/images/blog/footerbg.png);
     z-index: 300;
 }
 
@@ -331,7 +331,7 @@ nav {
 }
 
 .links h2 {
-    background: url(../images/linksbg.png) no-repeat left top;
+    background: url(/static/images/blog/linksbg.png) no-repeat left top;
     height: 38px
 }
 
@@ -352,7 +352,7 @@ nav {
 
 /*footer*/
 footer {
-    background: url(../images/footerbg.png) repeat-x;
+    background: url(/static/images/blog/footerbg.png) repeat-x;
     padding: 20px 0;
     color: #ccc;
     margin: 20px 0 0 0

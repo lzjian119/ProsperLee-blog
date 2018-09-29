@@ -56,7 +56,7 @@
     width: 170px;
     float: left;
     margin-top: 10px;
-    background: url(../images/tz.png) no-repeat
+    background: url(/static/images/blog/tz.png) no-repeat
 }
 
 .con_left ul {
@@ -141,7 +141,7 @@
 }
 
 .news_list li {
-    background: url(../images/libg.jpg) no-repeat left center;
+    background: url(/static/images/blog/libg.jpg) no-repeat left center;
     ;
     padding-left: 20px;
     line-height: 26px;

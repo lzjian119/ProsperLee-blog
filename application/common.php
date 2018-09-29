@@ -1,6 +1,6 @@
 <?php
 
-require "mysqllink.php";
+require "config.php";
 
 // 1登陆 2注册 3查询用户 4查询文章 5创建文章 6查询文章
 

@@ -81,7 +81,7 @@ $(function () {
     $("#signinForm").validate({
         submitHandler: function () {
             $.ajax({
-                url: "../application/config/login.php",
+                url: "../application/config/common.php",
                 type: "POST",
                 dataType: "json",
                 data: {
@@ -127,7 +127,7 @@ $(function () {
     $("#registerForm").validate({
         submitHandler: function () {
             $.ajax({
-                url: "../application/config/login.php",
+                url: "../application/config/common.php",
                 type: "POST",
                 dataType: "json",
                 data: {
