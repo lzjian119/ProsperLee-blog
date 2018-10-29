@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #bbb;
+}
+
+.title-box {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 56px;
+    background-color: #f3f3f3;
+}
+
+.title-box .title-input-box {
+    width: 100%;
+    padding: 8px 24px;
+}
+
+.title-box .title-input-box .title-input {
+    display: block;
+    font-size: 18px;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+}
+
+.title-box .submit-info {
+    display: flex;
+    padding: 8px 24px;
+    align-items: center;
+}
+
+.title-box .submit-info .submit-btn {
+    outline: none;
+    height: 100%;
+    white-space: nowrap;
+    padding: 7px 16px;
+    width: 100px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(200, 10, 20);
+}
+
+.title-box .submit-info .submit-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin: 0 32px;
+}
+
+.title-box .submit-info .submit-btn:hover {
+    background-color: rgb(180, 10, 20);
+}
+
+.title-box .submit-info .submit-btn:active {
+    background-color: rgb(160, 10, 20);
+}
+.document-editor{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 56px;
+    bottom: 0;
+    background-color: #f5f5f5;
+}
+.toolbar{
+    background-color: #e0e0e0;
+    min-height: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.editortext{
+    position: absolute!important;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 96%;
+    margin: 20px auto!important;
+    background-color: #ffffff;
+    border-radius: 3px;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);
+}
