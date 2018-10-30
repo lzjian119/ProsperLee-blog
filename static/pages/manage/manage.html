@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>博文管理</title>
+    <link rel="stylesheet" href="/static/css/manage/managecommon.css">
+    <link rel="stylesheet" href="/static/css/manage/manage.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-box">
+            <div class="logo">
+                <img src="/static/images/manage/logo.png" alt="">
+            </div>
+            <div class="nav">
+                <a href="/static/pages/manage/index.html">个人中心</a>
+                <a href="/static/pages/manage/editor.html">写博文</a>
+                <a href="/index.html">我的博客</a>
+                <a href="/static/pages/manage/manage.html">博文管理</a>
+                <a href="/static/pages/manage/index.html"><img src="/static/images/manage/01.png" alt=""></a>
+                <a href="#">退出</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h2>博文管理</h2>
+        <div class="article_box">
+            <div class="article_tabs_box">
+                <ul>
+                    <li class="article_tab_item">
+                        <a class="article_tab_link active" href="#">已发表(0)</a>
+                    </li>
+                    <li class="article_tab_item">
+                        <a class="article_tab_link" href="#">草稿箱(0)</a>
+                    </li>
+                </ul>
+                <div class="search_form">
+                    <input type="text" placeholder="请输入标题关键字">
+                    <button>搜索</button>
+                </div>
+            </div>
+            <!-- 已发表的table -->
+            <div id="publish">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>标题</th>
+                            <th>时间</th>
+                            <th>编辑</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="#">js 隔着背景png拖动其下边的img，大佬指点谢谢</a></td>
+                            <td>2018-08-08 22:22:00</td>
+                            <td>
+                                <a href="#">修改</a>
+                                <a href="#">删除</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td><a href="#">求一大神手把手教我怎么配置php 能够连接sql server 2008 R2求一大神手把手教我怎么配置php 能够连接sql server 2008
+                                    R2</a></td>
+                            <td>2018-08-08 22:22:00</td>
+                            <td>
+                                <a href="#">修改</a>
+                                <a href="#">删除</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td><a href="#">求一大神手把手教我怎么配置php</a></td>
+                            <td>2018-08-08 22:22:00</td>
+                            <td>
+                                <a href="#">修改</a>
+                                <a href="#">删除</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagination">
+                    <a href="#" class="prev">上一页</a>
+                    <a href="#" class="next">下一页</a>
+                </div>
+            </div>
+
+            <!-- 草稿箱的table -->
+            <div id="draft">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>标题</th>
+                            <th>时间</th>
+                            <th>编辑</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td><a href="#">js 隔着背景png拖动其下边的img，大佬指点谢谢</a></td>
+                            <td>2018-08-08 22:22:00</td>
+                            <td>
+                                <a href="#">发布</a>
+                                <a href="#">修改</a>
+                                <a href="#">删除</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td><a href="#">求一大神手把手教我怎么配置php 能够连接sql server 2008 R2求一大神手把手教我怎么配置php 能够连接sql server 2008
+                                    R2</a></td>
+                            <td>2018-08-08 22:22:00</td>
+                            <td>
+                                <a href="#">发布</a>
+                                <a href="#">修改</a>
+                                <a href="#">删除</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td><a href="#">求一大神手把手教我怎么配置php</a></td>
+                            <td>2018-08-08 22:22:00</td>
+                            <td>
+                                <a href="#">发布</a>
+                                <a href="#">修改</a>
+                                <a href="#">删除</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagination">
+                    <a href="#" class="prev">上一页</a>
+                    <a href="#" class="next">下一页</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright © 2018 - 2018 ProseprLee, All Rights Reserved</p>
+        <p>Powered by : ProseprLee</p>
+        <p>津ICP备18007309号</p>
+    </footer>
+</body>
+
+</html>

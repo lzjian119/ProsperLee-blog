@@ -1,63 +1,3 @@
-*{
-    padding: 0;
-    margin: 0;
-}
-a{
-    text-decoration: none;
-    color: #0088ff;
-}
-
-body{
-    background-color: #f5f6f7;
-}
-header{
-    background-color: #fff;
-    height: 40px;
-}
-header *{
-    max-height: 40px;
-}
-.header-box{
-    width: 1200px;
-    margin: 0 auto;
-    height: 40px;
-}
-.logo{
-    float: left;
-    height: 40px;
-}
-.logo img{
-    height: 36px;
-    padding: 2px 0;
-}
-.nav{
-    float: right;
-    line-height: 40px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-.nav a{
-    color: #424242;
-    display: inline-block;
-    font-size: 13px;
-    padding: 0 0 0 20px;
-}
-.nav a img{
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    padding: 4px 0;
-}
-main.user{
-    width: 1200px; 
-    margin: 20px auto;
-    background-color: #fff;
-    border-radius: 6px;
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15);
-    padding: 30px 0;
-    font-size: 15px;
-}
 main.user .userdesc{
     text-align: center;
 }
@@ -68,12 +8,6 @@ main.user .userdesc img{
 }
 main.user .userdesc p{
     margin: 6px 0;
-}
-main.user h2{
-    margin: 0 30px 30px 30px;
-    padding-bottom: 30px; 
-    font-size: 18px;
-    border-bottom: 1px solid #eee;
 }
 
 .userinfo ul{
@@ -92,12 +26,6 @@ main.user h2{
 .userinfo ul li:last-child{
     display: grid;
     text-align: justify;
-}
-footer{
-    width: 1200px;
-    margin: 20px auto;
-    text-align: center;
-    color: #424242;
 }
 .dialog,
 .dialog_upfile{

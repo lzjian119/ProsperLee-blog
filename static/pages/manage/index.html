@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>管理员</title>
+    <link rel="stylesheet" href="/static/css/manage/managecommon.css">
     <link rel="stylesheet" href="/static/css/manage/index.css">
 </head>
 
@@ -19,7 +20,7 @@
                 <a href="/static/pages/manage/index.html">个人中心</a>
                 <a href="/static/pages/manage/editor.html">写博文</a>
                 <a href="/index.html">我的博客</a>
-                <a href="#">博文管理</a>
+                <a href="/static/pages/manage/manage.html">博文管理</a>
                 <a href="/static/pages/manage/index.html"><img src="/static/images/manage/01.png" alt=""></a>
                 <a href="#">退出</a>
             </div>
@@ -33,7 +34,7 @@
             <p><span>ID:123456789</span></p>
         </div>
         <div class="userinfo">
-            <ul class="">
+            <ul>
                 <li><span>昵称：ProsperLee</span><a href="#">修改信息</a></li>
                 <li>实名：李昌盛</li>
                 <li>性别：男</li>
@@ -44,6 +45,7 @@
                 <li>简介：愿得一人心！！！</li>
             </ul>
         </div>
+        <!-- 修改信息 -->
         <div class="dialog" style="display:none;">
             <div class="dialog_cont">
                 <div class="dialog_cont_box">
@@ -89,6 +91,7 @@
                 </div>
             </div>
         </div>
+        <!-- 上传头像 -->
         <div class="dialog_upfile" style="display:none;">
             <div class="dialog_upfile_cont">
                 <div class="dialog_upfile_cont_box">

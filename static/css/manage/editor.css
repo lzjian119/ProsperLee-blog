@@ -64,16 +64,62 @@ body {
     border-radius: 4px;
     background-color: rgb(200, 10, 20);
 }
-
-.title-box .submit-info .submit-img {
+.title-box .submit-info .mini-nav{
+    position: relative;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin: 0 32px;
+    line-height: 16px;
+}
+.title-box .submit-info .mini-nav a{
+    display: inline-block;
+}
+.title-box .submit-info .mini-nav a .submit-img {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    margin: 0 32px;
+}
+.title-box .submit-info .mini-nav:hover .mini-nav-hover{
+    display: block;
 }
 
 .title-box .submit-info .submit-btn:hover {
     background-color: rgb(180, 10, 20);
+}
+.mini-nav-hover{
+    display: none;
+    position: absolute;
+    top: 36px;
+    left: -35px;
+    padding: 16px;
+    width: 96px;
+    height: 110px;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
+    border-radius: 4px;
+    z-index: 99999;
+}
+.mini-nav-hover::before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 46px;
+    top: -5px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #fff;
+}
+.mini-nav-hover a{
+    text-align: left;
+    white-space: nowrap;
+    margin: 2px 0 10px 0;
+    text-decoration: none;
+    font-size: 14px;
+    color: #424242;
 }
 
 .title-box .submit-info .submit-btn:active {
