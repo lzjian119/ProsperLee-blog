@@ -1,52 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>管理员</title>
+    <link rel="stylesheet" href="/static/css/manage/index.css">
 </head>
+
 <body>
     <header>
-        <div class="logo">
-            <img src="/static/images/manage/logo.png" alt="">
-        </div>
-        <div class="nav">
-            <a href="#">个人中心</a>
-            <a href="#">写博文</a>
-            <a href="#">我的博客</a>
-            <a href="#">博文管理</a>
-            <a href="#"><img src="" alt=""></a>
-            <a href="#">退出</a>
+        <div class="header-box">
+            <div class="logo">
+                <img src="/static/images/manage/logo.png" alt="">
+            </div>
+            <div class="nav">
+                <a href="/static/pages/manage/index.html">个人中心</a>
+                <a href="/static/pages/manage/editor.html">写博文</a>
+                <a href="/index.html">我的博客</a>
+                <a href="#">博文管理</a>
+                <a href="/static/pages/manage/index.html"><img src="/static/images/manage/01.png" alt=""></a>
+                <a href="#">退出</a>
+            </div>
         </div>
     </header>
-    <main class="userinfo">
+    <main class="user">
+        <h2>个人资料</h2>
         <div class="userdesc">
             <img src="/static/images/manage/01.png" alt="">
-            <span>修改头像</span>
-            <p>ID:123456789</p>
+            <p><a href="#">修改头像</a></p>
+            <p><span>ID:123456789</span></p>
         </div>
         <div class="userinfo">
-            <ul>
-                <li><span></span></li>
-                <li><span></span></li>
-                <li><span></span></li>
-                <li><span></span></li>
-                <li><span></span></li>
-                <li><span></span></li>
+            <ul class="">
+                <li><span>昵称：ProsperLee</span><a href="#">修改信息</a></li>
+                <li>实名：李昌盛</li>
+                <li>性别：男</li>
+                <li>生日：1997-02-11</li>
+                <li>地区：中国 天津 宝坻区</li>
+                <li>行业：计算机软件</li>
+                <li>职位：H5</li>
+                <li>简介：愿得一人心！！！</li>
             </ul>
+        </div>
+        <div class="dialog" style="display:none;">
+            <div class="dialog_cont">
+                <div class="dialog_cont_box">
+                    <h3 class="dialog_cont_title">修改资料</h3>
+                    <span class="dialog_cont_close">×</span>
+                </div>
+                <ul class="dialog_cont_form">
+                    <li>昵称：
+                        <input type="text">
+                    </li>
+                    <li>实名：
+                        <input type="text">
+                    </li>
+                    <li>性别：
+                        <select name="" id="">
+                            <option value="男">男</option>
+                            <option value="女">女</option>
+                            <option value="保密">保密</option>
+                        </select>
+                    </li>
+                    <li>生日：
+                        <input type="text">
+                    </li>
+                    <li>地区：
+                        <select name="" id=""></select>
+                        <select name="" id=""></select>
+                        <select name="" id=""></select>
+                    </li>
+                    <li>行业：
+                        <input type="text">
+                    </li>
+                    <li>职位：
+                        <input type="text">
+                    </li>
+                    <li>简介：
+                        <textarea name="" id=""></textarea>
+                        <span>300</span>
+                    </li>
+                </ul>
+                <div class="btn-group">
+                    <button>取消</button>
+                    <button>确认</button>
+                </div>
+            </div>
+        </div>
+        <div class="dialog_upfile" style="display:none;">
+            <div class="dialog_upfile_cont">
+                <div class="dialog_upfile_cont_box">
+                    <h3 class="dialog_upfile_cont_title">上传头像</h3>
+                    <span class="dialog_upfile_cont_close">×</span>
+                </div>
+                <div class="upfile">
+                    <div class="upfile_l">
+                        <div class="upfile_box">
+                            <input type="file" name="" id="">
+                            <div class="upfile_box_inner">
+                                <img src="/static/images/manage/01.png" alt="">
+                            </div>
+                        </div>
+                        <p>图片宽度*高度至少为150*150像素，大小不超过2MB</p>
+                        <div class="view-size">
+                            <div class="view-size-active"></div>
+                        </div>
+                    </div>
+                    <div class="upfile_r">
+                        <img src="/static/images/manage/01.png" alt="">
+                        <p>头像预览</p>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button>取消上传</button>
+                    <button>裁剪预览</button>
+                    <button>确认上传</button>
+                </div>
+            </div>
         </div>
     </main>
     <footer>
-        <div class="footer">
-            <div class="f_l">
-                <p>Copyright © 2018 - 2018 ProseprLee, All Rights Reserved</p>
-                <p>津ICP备18007309号</p>
-            </div>
-            <div class="f_r textr">
-                <p>Powered by: ProseprLee</p>
-            </div>
-        </div>
+        <p>Copyright © 2018 - 2018 ProseprLee, All Rights Reserved</p>
+        <p>Powered by : ProseprLee</p>
+        <p>津ICP备18007309号</p>
     </footer>
 </body>
+
 </html>

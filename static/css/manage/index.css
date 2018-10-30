@@ -1,0 +1,283 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: #0088ff;
+}
+
+body{
+    background-color: #f5f6f7;
+}
+header{
+    background-color: #fff;
+    height: 40px;
+}
+header *{
+    max-height: 40px;
+}
+.header-box{
+    width: 1200px;
+    margin: 0 auto;
+    height: 40px;
+}
+.logo{
+    float: left;
+    height: 40px;
+}
+.logo img{
+    height: 36px;
+    padding: 2px 0;
+}
+.nav{
+    float: right;
+    line-height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.nav a{
+    color: #424242;
+    display: inline-block;
+    font-size: 13px;
+    padding: 0 0 0 20px;
+}
+.nav a img{
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    padding: 4px 0;
+}
+main.user{
+    width: 1200px; 
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15);
+    padding: 30px 0;
+    font-size: 15px;
+}
+main.user .userdesc{
+    text-align: center;
+}
+main.user .userdesc img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+main.user .userdesc p{
+    margin: 6px 0;
+}
+main.user h2{
+    margin: 0 30px 30px 30px;
+    padding-bottom: 30px; 
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+}
+
+.userinfo ul{
+    list-style: none;
+    padding: 0;
+    margin: 0 120px;
+}
+.userinfo ul li{
+    padding: 8px 0;
+    color: #424242;
+}
+.userinfo ul li:first-child{
+    display: flex;
+    justify-content: space-between;
+}
+.userinfo ul li:last-child{
+    display: grid;
+    text-align: justify;
+}
+footer{
+    width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+    color: #424242;
+}
+.dialog,
+.dialog_upfile{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.6);
+}
+.dialog_cont,
+.dialog_upfile_cont{
+    width: 502px;
+    height: 474px;
+    margin: 100px auto;
+    background: #fff;
+    padding: 16px;
+    box-sizing: border-box;
+}
+.dialog_cont_title,
+.dialog_upfile_cont_title{
+    font-size: 16px;
+    color: #3d3d3d;
+    float: left;
+    height: 24px;
+    line-height: 24px;
+}
+.dialog_cont_close,
+.dialog_upfile_cont_close{
+    color: #999;
+    font-size: 16px;
+    float: right;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+}
+.dialog_cont_box,
+.dialog_upfile_cont_box{
+    overflow: hidden;
+}
+.dialog_cont_form li{
+    list-style: none;
+    font-size: 14px;
+    color: #4d4d4d;
+    margin-left: 16px;
+    margin-top: 10px;
+    height: 30px;
+    line-height: 30px;
+}
+.dialog_cont_form li input,
+.dialog_cont_form li textarea,
+.dialog_cont_form li select{
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    box-sizing: border-box;
+    color: #606266;
+    display: inline-block;
+    font-size: inherit;
+    height: 30px;
+    line-height: 30px;
+    outline: 0;
+    padding: 0 15px;
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+}
+.dialog_cont_form li select{
+    min-width: 100px;
+}
+.dialog_cont_form li textarea {
+    resize: none;
+    width: 396px;
+    height: 60px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding-top: 4px;
+    padding-left: 14px;
+    font-size: 14px;
+    color: #4d4d4d;
+    vertical-align: top;
+    line-height: 1.5em;
+}
+.dialog_cont_form li:last-child{
+    position: relative;
+    height: auto;
+}
+.dialog_cont_form li:last-child span{
+    position: absolute;
+    right: 30px;
+    bottom: 3px;
+    line-height: 1em;
+    color: #0088ff;
+}
+.btn-group{
+    float: right;
+    margin-top: 30px;
+}
+.btn-group button{
+    width: 72px;
+    height: 36px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #3d3d3d;
+    border: none;
+    margin-right: 16px;
+    cursor: pointer;
+    outline: none;
+}
+.btn-group button:last-child{
+    background-color: #ca0d16;
+    color: #fff;
+}
+.dialog_upfile .upfile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+}
+.dialog_upfile .upfile_r img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.dialog_upfile .upfile_r p{
+    text-align: center;
+    color: #606266;
+}
+.dialog_upfile .upfile_l .upfile_box{
+    position: relative;
+    z-index: 200;
+    border-radius: 6px;
+    background-color: rgba(238, 238, 238, 0.4);    
+    width: 150px;
+    height: 150px;
+    padding: 50px;
+    overflow: hidden;
+}
+.dialog_upfile .upfile_l .upfile_box .upfile_box_inner{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    text-align: center;
+}
+.dialog_upfile .upfile_l .upfile_box .upfile_box_inner img{
+    position: absolute;
+    left: -20px;
+    top: -30px;
+    max-width: 500px;
+    max-height: 500px;
+}
+.dialog_upfile .upfile_l .upfile_box input[type=file]{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+.dialog_upfile .upfile_l p{
+    font-size: 12px;
+    color: #606266;
+}
+.btn-group button:nth-child(2){
+    background-color: #ca0d16;
+    color: #fff;
+}
+.dialog_upfile .upfile_l .view-size{
+    position: relative;
+    width: 250px;
+    height: 10px;
+    margin-top: 14px;
+    background-color: #606266;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.dialog_upfile .upfile_l .view-size .view-size-active{
+    height: 100%;
+    width: 50%;
+    background-color: #0088ff;
+}
