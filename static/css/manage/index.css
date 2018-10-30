@@ -2,8 +2,8 @@ main.user .userdesc{
     text-align: center;
 }
 main.user .userdesc img{
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
 }
 main.user .userdesc p{
