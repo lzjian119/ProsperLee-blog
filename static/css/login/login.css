@@ -1,6 +1,7 @@
 
 * {
     font-family: Arial,  Helvetica, sans-serif, "Microsoft YaHei"!important;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html {

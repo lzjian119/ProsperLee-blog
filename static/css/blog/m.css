@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+*{
+    -webkit-tap-highlight-color: transparent;
+}
 /* 大于960px，小于1199px */
 @media screen and (min-width: 960px) and (max-width: 1199px) {
 
