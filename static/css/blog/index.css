@@ -112,6 +112,7 @@ h3.blogtitle {
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1);
     -ms-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .autor {
@@ -150,6 +151,7 @@ h3.blogtitle {
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 .bloginfo p {
@@ -202,6 +204,7 @@ h3.blogtitle {
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 .tuwen li b {
@@ -253,6 +256,7 @@ h3.blogtitle {
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1);
     -ms-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 /*新闻*/
