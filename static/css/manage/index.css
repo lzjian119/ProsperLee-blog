@@ -39,11 +39,16 @@ main.user .userdesc p{
 .dialog_cont,
 .dialog_upfile_cont{
     width: 502px;
-    height: 474px;
     margin: 100px auto;
     background: #fff;
     padding: 16px;
     box-sizing: border-box;
+}
+.dialog_cont::after,
+.dialog_upfile_cont::after{
+    content: "";
+    clear: both;
+    display: block;
 }
 .dialog_cont_title,
 .dialog_upfile_cont_title{
@@ -97,7 +102,7 @@ main.user .userdesc p{
 }
 .dialog_cont_form li textarea {
     resize: none;
-    width: 396px;
+    width: 356px;
     height: 60px;
     border-radius: 4px;
     border: 1px solid #ccc;
